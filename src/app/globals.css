@@ -169,3 +169,57 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Mobile-specific responsive utilities */
+@media (max-width: 640px) {
+  .animate-blob {
+    animation-duration: 10s; /* Slower on mobile for better performance */
+  }
+  
+  .shimmer-text {
+    animation-duration: 4s; /* Slightly slower shimmer on mobile */
+  }
+  
+  /* Reduce motion for mobile performance */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-blob,
+    .animate-float,
+    .animate-glow,
+    .shimmer-text {
+      animation: none;
+    }
+  }
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px; /* Apple's recommended touch target size */
+  }
+  
+  /* Better spacing for mobile navigation */
+  nav {
+    padding-bottom: 1rem;
+  }
+  
+  /* Ensure readability on small screens */
+  .glass, .glass-dark {
+    backdrop-filter: blur(10px); /* Reduce blur for better mobile performance */
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Better mobile typography scaling */
+@media (max-width: 480px) {
+  h1 {
+    line-height: 1.1;
+  }
+  
+  h2 {
+    line-height: 1.2;
+  }
+}

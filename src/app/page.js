@@ -41,17 +41,17 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 px-6 py-4">
+      <nav className="relative z-50 px-4 sm:px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-2 sm:space-x-3"
           >
-            <div className="p-2 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg">
-              <Shield className="w-6 h-6 text-white" />
+            <div className="p-1.5 sm:p-2 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg">
+              <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
               CipherIt
             </span>
           </motion.div>
@@ -69,12 +69,12 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex space-x-4"
+            className="flex space-x-2 sm:space-x-4"
           >
-            <Link href="/auth/login" className="px-4 py-2 text-amber-400 hover:text-white transition-colors">
+            <Link href="/auth/login" className="px-2 sm:px-4 py-2 text-amber-400 hover:text-white transition-colors text-sm sm:text-base">
               Login
             </Link>
-            <Link href="/auth/signup" className="px-6 py-2 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all transform hover:scale-105">
+            <Link href="/auth/signup" className="px-3 sm:px-6 py-2 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all transform hover:scale-105 text-sm sm:text-base">
               Get Started
             </Link>
           </motion.div>
@@ -82,12 +82,12 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section ref={heroRef} className="relative z-10 px-6 py-20 min-h-screen flex items-center">
+      <section ref={heroRef} className="relative z-10 px-4 sm:px-6 py-12 sm:py-20 min-h-screen flex items-center">
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-20 h-20 bg-amber-500/15 rounded-full blur-xl animate-float"></div>
-          <div className="absolute top-40 right-20 w-32 h-32 bg-orange-500/15 rounded-full blur-xl animate-float animation-delay-2000"></div>
-          <div className="absolute bottom-40 left-20 w-24 h-24 bg-yellow-500/15 rounded-full blur-xl animate-float animation-delay-4000"></div>
+          <div className="absolute top-20 left-4 sm:left-10 w-16 h-16 sm:w-20 sm:h-20 bg-amber-500/15 rounded-full blur-xl animate-float"></div>
+          <div className="absolute top-40 right-8 sm:right-20 w-24 h-24 sm:w-32 sm:h-32 bg-orange-500/15 rounded-full blur-xl animate-float animation-delay-2000"></div>
+          <div className="absolute bottom-40 left-8 sm:left-20 w-20 h-20 sm:w-24 sm:h-24 bg-yellow-500/15 rounded-full blur-xl animate-float animation-delay-4000"></div>
         </div>
 
         <div className="max-w-7xl mx-auto text-center relative">
@@ -101,33 +101,33 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-500/15 to-orange-500/15 border border-amber-500/25 rounded-full mb-8 glass"
+              className="inline-flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-amber-500/15 to-orange-500/15 border border-amber-500/25 rounded-full mb-6 sm:mb-8 glass"
             >
-              <Star className="w-5 h-5 text-amber-400 fill-current" />
-              <span className="text-amber-300 font-semibold">Trusted by 50,000+ Families</span>
-              <Star className="w-5 h-5 text-amber-400 fill-current" />
+              <Star className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 fill-current" />
+              <span className="text-amber-300 font-semibold text-sm sm:text-base">Trusted by 50,000+ Families</span>
+              <Star className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 fill-current" />
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight px-2">
               Sleep Peacefully While
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent block shimmer-text">
                 Hackers Fail
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
               Protect your family photos, financial documents, and personal files from identity thieves 
               and data breaches. Even if your cloud gets hacked, your data stays completely unreadable.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link href="/auth/signup" className="group premium-button px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg text-lg font-semibold hover:from-amber-700 hover:to-orange-700 transition-all transform hover:scale-105 flex items-center space-x-2">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4">
+              <Link href="/auth/signup" className="group premium-button w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg text-base sm:text-lg font-semibold hover:from-amber-700 hover:to-orange-700 transition-all transform hover:scale-105 flex items-center justify-center space-x-2">
                 <span>Protect My Files Now</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button className="premium-button px-8 py-4 glass-dark rounded-lg text-lg font-semibold hover:border-amber-500 hover:text-amber-400 transition-all flex items-center space-x-2">
+              <button className="premium-button w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 glass-dark rounded-lg text-base sm:text-lg font-semibold hover:border-amber-500 hover:text-amber-400 transition-all flex items-center justify-center space-x-2">
                 <span>See It In Action</span>
-                <Eye className="w-5 h-5" />
+                <Eye className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
 
@@ -136,18 +136,18 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-wrap justify-center items-center gap-8 text-gray-400"
+              className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-8 text-gray-400 px-4"
             >
-              <div className="flex items-center space-x-2 glass px-4 py-2 rounded-full">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="flex items-center space-x-2 glass px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base">
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
                 <span>Your Keys Never Leave Your Device</span>
               </div>
-              <div className="flex items-center space-x-2 glass px-4 py-2 rounded-full">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="flex items-center space-x-2 glass px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base">
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
                 <span>Even We Can't Read Your Files</span>
               </div>
-              <div className="flex items-center space-x-2 glass px-4 py-2 rounded-full">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="flex items-center space-x-2 glass px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base">
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
                 <span>Works With Your Existing Cloud</span>
               </div>
             </motion.div>
@@ -156,36 +156,36 @@ export default function Home() {
       </section>
 
       {/* Pain Points Section - New Premium Addition */}
-      <section className="relative z-10 px-6 py-20 bg-gradient-to-r from-red-950/20 to-orange-950/20">
+      <section className="relative z-10 px-4 sm:px-6 py-12 sm:py-20 bg-gradient-to-r from-red-950/20 to-orange-950/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 px-4">
               Are You <span className="text-red-400">Losing Sleep</span> Over These Fears?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-12 px-4">
               Every day, millions of personal files get exposed in data breaches. Your most private moments, financial records, and family memories are sitting ducks in unprotected cloud storage.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {painPoints.map((pain, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 bg-red-950/30 border border-red-800/30 rounded-2xl backdrop-blur-lg"
+                className="p-4 sm:p-6 bg-red-950/30 border border-red-800/30 rounded-2xl backdrop-blur-lg"
               >
-                <div className="mb-4 p-3 bg-red-500/20 rounded-lg w-fit">
+                <div className="mb-4 p-2 sm:p-3 bg-red-500/20 rounded-lg w-fit">
                   {pain.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-red-300">{pain.title}</h3>
-                <p className="text-gray-300 mb-4">{pain.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-red-300">{pain.title}</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">{pain.description}</p>
                 <div className="text-sm text-red-400 font-semibold">{pain.consequence}</div>
               </motion.div>
             ))}
@@ -197,11 +197,11 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-center"
           >
-            <div className="p-8 bg-gradient-to-r from-amber-600/15 to-orange-600/15 rounded-3xl border border-amber-500/25 backdrop-blur-lg">
-              <h3 className="text-2xl font-bold mb-4 text-amber-300">
+            <div className="p-6 sm:p-8 bg-gradient-to-r from-amber-600/15 to-orange-600/15 rounded-3xl border border-amber-500/25 backdrop-blur-lg">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-amber-300">
                 🛡️ These Nightmares End Today
               </h3>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 CipherIt makes your files mathematically impossible to read, even if every cloud service gets hacked tomorrow.
               </p>
             </div>
@@ -210,52 +210,52 @@ export default function Home() {
       </section>
 
       {/* Features Grid */}
-      <section id="features" className="relative z-10 px-6 py-20">
+      <section id="features" className="relative z-10 px-4 sm:px-6 py-12 sm:py-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 px-4">
               Stop Worrying About <span className="text-amber-400">Data Breaches</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
               Finally, a solution that puts you back in control. Your most precious files become completely unreadable to hackers, corporations, and governments.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group p-8 glass hover:glass-dark rounded-2xl luxury-border hover:border-amber-500/50 transition-all hover:transform hover:scale-105 relative overflow-hidden"
+                className="group p-6 sm:p-8 glass hover:glass-dark rounded-2xl luxury-border hover:border-amber-500/50 transition-all hover:transform hover:scale-105 relative overflow-hidden"
               >
                 {/* Premium shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 
                 <div className="relative z-10">
-                  <div className="mb-6 p-3 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-lg w-fit animate-glow">
+                  <div className="mb-4 sm:mb-6 p-2 sm:p-3 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-lg w-fit animate-glow">
                     {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-amber-400 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 group-hover:text-amber-400 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
-                  <ul className="space-y-3">
+                  <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">{feature.description}</p>
+                  <ul className="space-y-2 sm:space-y-3">
                     {feature.benefits.map((benefit, i) => (
                       <motion.li 
                         key={i} 
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.4, delay: (index * 0.1) + (i * 0.05) }}
-                        className="flex items-center space-x-3 text-sm text-gray-400"
+                        className="flex items-start space-x-2 sm:space-x-3 text-xs sm:text-sm text-gray-400"
                       >
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 flex-shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </motion.li>
                     ))}
@@ -268,31 +268,31 @@ export default function Home() {
       </section>
 
       {/* Security Section */}
-      <section id="security" className="relative z-10 px-6 py-20 bg-white/5">
+      <section id="security" className="relative z-10 px-4 sm:px-6 py-12 sm:py-20 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
                 <span className="text-amber-400">Bulletproof</span> Protection
                 <br />That Actually Works
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
                 While others promise security, we deliver mathematical certainty. Your data becomes as secure as the world's most classified secrets, but easier to use than Dropbox.
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {securityFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="p-2 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-lg">
+                  <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="p-1.5 sm:p-2 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-lg flex-shrink-0">
                       {feature.icon}
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                      <p className="text-gray-400">{feature.description}</p>
+                      <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">{feature.title}</h3>
+                      <p className="text-gray-400 text-sm sm:text-base">{feature.description}</p>
                     </div>
                   </div>
                 ))}
@@ -305,21 +305,21 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-3xl p-8 backdrop-blur-lg border border-stone-800">
-                <div className="text-center mb-8">
-                  <Shield className="w-16 h-16 text-amber-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold">Encryption Process</h3>
+              <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-3xl p-6 sm:p-8 backdrop-blur-lg border border-stone-800">
+                <div className="text-center mb-6 sm:mb-8">
+                  <Shield className="w-12 h-12 sm:w-16 sm:h-16 text-amber-400 mx-auto mb-3 sm:mb-4" />
+                  <h3 className="text-xl sm:text-2xl font-bold">Encryption Process</h3>
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {encryptionSteps.map((step, index) => (
-                    <div key={index} className="flex items-center space-x-4">
-                      <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold">
+                    <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base flex-shrink-0">
                         {index + 1}
                       </div>
                       <div>
-                        <h4 className="font-semibold">{step.title}</h4>
-                        <p className="text-sm text-gray-400">{step.description}</p>
+                        <h4 className="font-semibold text-sm sm:text-base">{step.title}</h4>
+                        <p className="text-xs sm:text-sm text-gray-400">{step.description}</p>
                       </div>
                     </div>
                   ))}
@@ -331,48 +331,48 @@ export default function Home() {
       </section>
 
       {/* Social Proof */}
-      <section className="relative z-10 px-6 py-20">
+      <section className="relative z-10 px-4 sm:px-6 py-12 sm:py-20">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold mb-12">Trusted by People Like You</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-12">Trusted by People Like You</h2>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="p-6 bg-stone-900/50 rounded-2xl border border-stone-800">
-                  <div className="flex items-center mb-4">
+                <div key={index} className="p-4 sm:p-6 bg-stone-900/50 rounded-2xl border border-stone-800">
+                  <div className="flex items-center mb-3 sm:mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
+                      <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.quote}"</p>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <p className="text-gray-300 mb-3 sm:mb-4 italic text-sm sm:text-base">"{testimonial.quote}"</p>
+                  <div className="flex items-center space-x-2 sm:space-x-3">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
                       {testimonial.name[0]}
                     </div>
-                    <div>
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}</div>
+                    <div className="text-left">
+                      <div className="font-semibold text-sm sm:text-base">{testimonial.name}</div>
+                      <div className="text-xs sm:text-sm text-gray-400">{testimonial.role}</div>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="flex justify-center items-center space-x-12 opacity-60">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12 opacity-60">
               <div className="text-center">
-                <div className="text-2xl font-bold">50,000+</div>
+                <div className="text-xl sm:text-2xl font-bold">50,000+</div>
                 <div className="text-sm text-gray-400">Families Protected</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold">2M+</div>
+                <div className="text-xl sm:text-2xl font-bold">2M+</div>
                 <div className="text-sm text-gray-400">Files Secured</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold">Zero</div>
+                <div className="text-xl sm:text-2xl font-bold">Zero</div>
                 <div className="text-sm text-gray-400">Data Breaches</div>
               </div>
             </div>
@@ -381,43 +381,43 @@ export default function Home() {
       </section>
 
       {/* Premium Value Proposition Section */}
-      <section className="relative z-10 px-6 py-20">
+      <section className="relative z-10 px-4 sm:px-6 py-12 sm:py-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="mb-6">
-                <span className="px-4 py-2 bg-gradient-to-r from-amber-500/15 to-orange-500/15 border border-amber-500/25 rounded-full text-amber-300 text-sm font-semibold">
+              <div className="mb-4 sm:mb-6">
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-amber-500/15 to-orange-500/15 border border-amber-500/25 rounded-full text-amber-300 text-xs sm:text-sm font-semibold">
                   ✨ The CipherIt Difference
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
                 From <span className="text-red-400">Vulnerable</span> to
                 <br />
                 <span className="text-green-400">Virtually Unhackable</span>
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
                 While others store your data on their servers (where hackers can steal it), we transform your files into unbreakable codes that only you possess the key to unlock.
               </p>
               
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {beforeAfter.map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-center space-x-4 p-4 bg-white/5 rounded-xl border border-stone-800"
+                    className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 bg-white/5 rounded-xl border border-stone-800"
                   >
                     <div className="flex-shrink-0">
                       {item.icon}
                     </div>
                     <div>
-                      <div className="font-semibold text-green-400">{item.after}</div>
-                      <div className="text-sm text-gray-400">Instead of: <span className="text-red-400">{item.before}</span></div>
+                      <div className="font-semibold text-green-400 text-sm sm:text-base">{item.after}</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Instead of: <span className="text-red-400">{item.before}</span></div>
                     </div>
                   </motion.div>
                 ))}
@@ -430,27 +430,27 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative bg-gradient-to-br from-amber-500/8 to-orange-500/8 rounded-3xl p-8 backdrop-blur-lg border border-stone-800">
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
+              <div className="relative bg-gradient-to-br from-amber-500/8 to-orange-500/8 rounded-3xl p-6 sm:p-8 backdrop-blur-lg border border-stone-800">
+                <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-black px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold">
                   💎 Premium Protection
                 </div>
                 
-                <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-white" />
+                <div className="text-center mb-6 sm:mb-8">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Your Digital Fortress</h3>
-                  <p className="text-gray-300">See exactly how your protection works</p>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Your Digital Fortress</h3>
+                  <p className="text-gray-300 text-sm sm:text-base">See exactly how your protection works</p>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {protectionLevels.map((level, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                        <span className="text-sm">{level.feature}</span>
+                    <div key={index} className="flex items-center justify-between p-2 sm:p-3 bg-white/5 rounded-lg">
+                      <div className="flex items-center space-x-2 sm:space-x-3">
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
+                        <span className="text-xs sm:text-sm">{level.feature}</span>
                       </div>
-                      <div className="text-green-400 font-bold text-sm">{level.strength}</div>
+                      <div className="text-green-400 font-bold text-xs sm:text-sm">{level.strength}</div>
                     </div>
                   ))}
                 </div>
@@ -461,25 +461,25 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 px-6 py-20 bg-gradient-to-r from-amber-600/15 to-orange-600/15">
+      <section className="relative z-10 px-4 sm:px-6 py-12 sm:py-20 bg-gradient-to-r from-amber-600/15 to-orange-600/15">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 px-4">
               Protect Everything That Matters to You
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 px-4">
               Join over 50,000 families who sleep better knowing their precious memories and important documents are truly safe. Start protecting your digital life in under 60 seconds.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/auth/signup" className="px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg text-lg font-semibold hover:from-amber-700 hover:to-orange-700 transition-all transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+              <Link href="/auth/signup" className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg text-base sm:text-lg font-semibold hover:from-amber-700 hover:to-orange-700 transition-all transform hover:scale-105">
                 Protect My Files Now
               </Link>
-              <button className="px-8 py-4 border border-stone-600 rounded-lg text-lg font-semibold hover:border-amber-500 hover:text-amber-400 transition-all">
+              <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-stone-600 rounded-lg text-base sm:text-lg font-semibold hover:border-amber-500 hover:text-amber-400 transition-all">
                 See How It Works
               </button>
             </div>
@@ -488,26 +488,26 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 px-6 py-12 border-t border-stone-800">
+      <footer className="relative z-10 px-4 sm:px-6 py-8 sm:py-12 border-t border-stone-800">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <div className="p-2 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg">
-                <Shield className="w-6 h-6 text-white" />
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-4 md:mb-0">
+              <div className="p-1.5 sm:p-2 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg">
+                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+              <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
                 CipherIt
               </span>
             </div>
             
-            <div className="flex space-x-8 text-gray-400">
+            <div className="flex flex-wrap justify-center space-x-4 sm:space-x-8 text-gray-400 text-sm sm:text-base">
               <a href="#" className="hover:text-amber-400 transition-colors">Privacy</a>
               <a href="#" className="hover:text-amber-400 transition-colors">Terms</a>
               <a href="#" className="hover:text-amber-400 transition-colors">Support</a>
             </div>
           </div>
           
-          <div className="mt-8 pt-8 border-t border-stone-800 text-center text-gray-400">
+          <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-stone-800 text-center text-gray-400 text-sm sm:text-base">
             <p>&copy; 2024 CipherIt. Your data, your security, your control.</p>
           </div>
         </div>
